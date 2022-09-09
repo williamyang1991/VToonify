@@ -52,7 +52,7 @@ If you have a problem regarding the cpp extention (fused and upfirdn2d), or no G
 
 ## (2) Training VToonify
 
-Download the supporting models to the `./checkpoint/` folder:
+Download the supporting models to the `./checkpoint/` folder and arrange them in [this folder structure](./checkpoint/):
 
 | Model | Description |
 | :--- | :--- |
@@ -62,7 +62,6 @@ Download the supporting models to the `./checkpoint/` folder:
 | [derections.npy]() | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
 | [Toonify](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) \| [DualStyleGAN](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) | pre-trained stylegan-based toonify models |
 
-The saved models are suggested to follow the [folder structure](./checkpoint/).
 
 ## Citation
 
