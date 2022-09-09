@@ -18,9 +18,9 @@ checkpoint
     |--vtoonify_s026_d0.5.pt              % VToonify-D model for the 26th Cartoon style with style degree 0.5
     ...                                   % VToonify-D model for other settings
 |--vtoonify_t_caricature
-    % the same files as in Cartoon
+    % the same files as in vtoonify_t_cartoon
 |--vtoonify_d_caricature
-    % the same files as in Cartoon
+    % the same files as in vtoonify_d_cartoon
 ...
 % the followings are pre-trained Toonify and DualStyleGAN models
 |--cartoon
@@ -29,6 +29,6 @@ checkpoint
     |--refined_exstyle_code.npy           % Refined extrinsic style codes of Cartoon dataset
     |--finetune-000600.pt                 % * Toonify model (fine-tuned StyleGAN on Cartoon dataset)
 |--caricature
-    % the same files as in Cartoon
+    % the same files as in cartoon
 ...
 ```
