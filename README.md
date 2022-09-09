@@ -23,3 +23,20 @@ Extensive experimental results demonstrate the effectiveness of our proposed VTo
 ## Updates
 
 - [09/2022] This website is created.
+
+
+## Installation
+**Clone this repo:**
+```bash
+git clone https://github.com/williamyang1991/VToonify.git
+cd VToonify
+```
+**Dependencies:**
+
+All dependencies for defining the environment are provided in `environment/vtoonify_env.yaml`.
+We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/):
+```bash
+conda env create -f ./environment/vtoonify_env.yaml
+```
+We use CUDA 10.1 so it will install PyTorch 1.7.1 (corresponding to [Line 22](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L22), [Line 25](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L25), [Line 26](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L26) of `vtoonify_env.yaml`). Please install PyTorch that matches your own CUDA version following [https://pytorch.org/](https://pytorch.org/).
+
