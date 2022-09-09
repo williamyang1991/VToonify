@@ -49,6 +49,62 @@ If you have a problem regarding the cpp extention (fused and upfirdn2d), or no G
 
 ## (1) Inference for Image/Video Toonification
 
+### Inference Notebook 
+<a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>  
+To help users get started, we provide a Jupyter notebook found in `./notebooks/inference_playground.ipynb` that allows one to visualize the performance of VToonify.
+The notebook will download the necessary pretrained models and run inference on the images found in `./data/`.
+
+### Pre-trained Models
+
+Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (access code: sigg).
+
+<table>
+    <tr>
+        <th>Backbone</th><th>Style</th><th>Models</th>
+    </tr>
+    <tr>
+        <td rowspan="5">DualStyleGAN</td><td>cartoon</td><td>pre-trained VToonify-D and 317 cartoon style codes</td>
+    </tr>
+    <tr>
+        <td>caricature</td><td>pre-trained VToonify-D and 199 caricature style codes</td>
+    </tr>
+    <tr>
+        <td>arcane</td><td>pre-trained VToonify-D and 100 arcane style codes</td>
+    </tr> 
+    <tr>
+        <td>comic</td><td>pre-trained VToonify-D and 101 comic style codes</td>
+    </tr>   
+    <tr>
+        <td>pixar</td><td>pre-trained VToonify-D and 122 pixar style codes</td>
+    </tr>   
+    <tr>
+        <td rowspan="5">Toonify</td><td>cartoon</td><td>pre-trained VToonify-T</td>
+    </tr>
+    <tr>
+        <td>caricature</td><td>pre-trained VToonify-T</td>
+    </tr>
+    <tr>
+        <td>arcane</td><td>pre-trained VToonify-T</td>
+    </tr> 
+    <tr>
+        <td>comic</td><td>pre-trained VToonify-T</td>
+    </tr>   
+    <tr>
+        <td>pixar</td><td>pre-trained VToonify-T</td>
+    </tr>   
+    <tr>
+        <th colspan="2">Supporting models</th><th>Models</th>
+    </tr>
+    <tr>
+        <td colspan="2">Pixel2style2pixel encoder</td><td><a href="https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing">encoder.pt</a></td>
+    </tr>  
+    <tr>
+        <td colspan="2">BiSeNet for face parsing</td><td><a href="">faceparsing.pt</a></td>
+    </tr>      
+</table>
+
+The downloaded models are suggested to be arranged in [this folder structure](./checkpoint/):
+
 ## (2) Training VToonify
 
 Download the supporting models to the `./checkpoint/` folder and arrange them in [this folder structure](./checkpoint/):
