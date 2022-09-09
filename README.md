@@ -123,10 +123,13 @@ Specify the content image and the model, control the style with the following op
 - `--scale_image`: rescale the input image/video to fit VToonify (recommend).
 - `--padding` (default: 200, 200, 200, 200): left, right, top, bottom paddings to the face center.
 
+Here is an example of arcane style transfer:
 ```python
-python style_transfer.py --scale_image --style_id 0 --style_degree 0.5 \
-       --exstyle_path ./checkpoint/arcane/exstyle_code.npy --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt
+python style_transfer.py --scale_image --style_id 0 --style_degree 0.6 \
+       --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
+       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt
 ```
+
 
 
 ## (2) Training VToonify
