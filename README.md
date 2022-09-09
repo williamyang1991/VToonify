@@ -56,7 +56,7 @@ The notebook will download the necessary pretrained models and run inference on 
 
 ### Pre-trained Models
 
-Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (access code: sigg).
+Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (access code: sigg):
 
 <table>
     <tr>
@@ -103,7 +103,7 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
     </tr>      
 </table>
 
-The downloaded models are suggested to be arranged in [this folder structure](./checkpoint/):
+The downloaded models are suggested to be arranged in [this folder structure](./checkpoint/).
 
 ## (2) Training VToonify
 
