@@ -60,7 +60,7 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
 
 <table>
     <tr>
-        <th>Backbone</th><th>Style</th><th>Models</th>
+        <th>Backbone</th><th>Style</th><th>Model and extrinsic style code link</th>
     </tr>
     <tr>
         <td rowspan="5">DualStyleGAN</td><td>cartoon</td><td>pre-trained VToonify-D and 317 cartoon style codes</td>
@@ -93,7 +93,7 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
         <td>pixar</td><td>pre-trained VToonify-T</td>
     </tr>   
     <tr>
-        <th colspan="2">Supporting models</th><th>Models</th>
+        <th colspan="2">Supporting model</th><th>Model link</th>
     </tr>
     <tr>
         <td colspan="2">Pixel2style2pixel encoder</td><td><a href="https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing">encoder.pt</a></td>
