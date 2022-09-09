@@ -1,6 +1,6 @@
 ## saved models
 
-folder structure (* only for training, do not required for inference):
+folder structure (* models that do not required for inference, only for training):
 ```
 checkpoint
 |--encoder.pt                             % Pixel2style2pixel model
