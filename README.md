@@ -19,3 +19,7 @@ Extensive experimental results demonstrate the effectiveness of our proposed VTo
 
 **Features**:<br> 
 **High-Resolution Video** (>1024, support unaligned faces) | **Data-Friendly** (no real training data) | **Style Control**
+
+## Updates
+
+- [09/2022] This website is created.
