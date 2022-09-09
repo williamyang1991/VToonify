@@ -46,3 +46,21 @@ conda env create -f ./environment/vtoonify_env.yaml
 We use CUDA 10.1 and PyTorch 1.7.1 (corresponding to [Line 22](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L22), [Line 25](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L25), [Line 26](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L26) of `vtoonify_env.yaml`). Please install PyTorch that matches your own CUDA version following [https://pytorch.org/](https://pytorch.org/).
 
 If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
+
+
+## Citation
+
+If you find this work useful for your research, please consider citing our paper:
+
+```bibtex
+@article{yang2022Vtoonify,
+  title={VToonify: Controllable High-Resolution Portrait Video Style Transfer},
+  author={Yang, Shuai and Jiang, Liming and Liu, Ziwei and Loy, Chen Change},
+  journal={ACM Transactions on Graphics (TOG)},
+  year={2022}
+}
+```
+
+## Acknowledgments
+
+The code is mainly developed based on [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch) and [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel).
