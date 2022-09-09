@@ -39,11 +39,10 @@ We have tested on:
 - Pillow 8.3.1; Matplotlib 3.3.4; opencv-python 4.5.3; Faiss 1.7.1; tqdm 4.61.2; Ninja 1.10.2
 
 All dependencies for defining the environment are provided in `environment/vtoonify_env.yaml`.
-We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/):
+We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/) (you may need to modify `vtoonify_env.yaml` to install PyTorch that matches your own CUDA version following [https://pytorch.org/](https://pytorch.org/)):
 ```bash
 conda env create -f ./environment/vtoonify_env.yaml
 ```
-We use CUDA 10.1 and PyTorch 1.7.1 (corresponding to [Line 22](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L22), [Line 25](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L25), [Line 26](https://github.com/williamyang1991/DualStyleGAN/blob/main/environment/vtoonify_env.yaml#L26) of `vtoonify_env.yaml`). Please install PyTorch that matches your own CUDA version following [https://pytorch.org/](https://pytorch.org/).
 
 If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
 
