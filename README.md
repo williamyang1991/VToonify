@@ -48,6 +48,21 @@ We use CUDA 10.1 and PyTorch 1.7.1 (corresponding to [Line 22](https://github.co
 If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
 
 
+## (1) Inference for Image/Video Toonification
+
+## (2) Training VToonify
+
+Download the supporting models to the `./checkpoint/` folder:
+
+| Model | Description |
+| :--- | :--- |
+| [stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view) | StyleGAN model trained on FFHQ taken from [rosinality](https://github.com/rosinality/stylegan2-pytorch). |
+| [encoder.pt](https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing) | Pixel2style2pixel encoder that embeds FFHQ images into StyleGAN2 Z+ latent code |
+| [faceparsing.pt]() | BiSeNet that predicts face parsing maps |
+| [derections.npy]() | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
+| [Toonify](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) \| [DualStyleGAN](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) | pre-trained stylegan-based toonify models |
+
+
 ## Citation
 
 If you find this work useful for your research, please consider citing our paper:
