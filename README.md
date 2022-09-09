@@ -78,4 +78,4 @@ If you find this work useful for your research, please consider citing our paper
 
 ## Acknowledgments
 
-The code is mainly developed based on [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch) and [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel).
+The code is mainly developed based on [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch), [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel) and [DualStyleGAN](https://github.com/williamyang1991/DualStyleGAN).
