@@ -62,6 +62,7 @@ Download the supporting models to the `./checkpoint/` folder:
 | [derections.npy]() | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
 | [Toonify](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) \| [DualStyleGAN](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) | pre-trained stylegan-based toonify models |
 
+The saved checkpoints are suggested to follow the [folder structure](./checkpoint/).
 
 ## Citation
 
