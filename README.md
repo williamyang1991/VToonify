@@ -111,6 +111,16 @@ Transfer the style of a default Cartoon image onto a default face:
 ```python
 python style_transfer.py --scale_image
 ```
+The results are saved in the folder `.\output\`, where `unsplash-rDEOVtE7vOs_input.jpg` is the rescaled input image to fit VToonify and 
+`unsplash-rDEOVtE7vOs_vtoonify_d.jpg` is the result. 
+
+Specify the content image and the model, control the style with the following options:
+- `--content`: path to the target face image or video
+- `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/doc_images)). 
+- `--style_degree` (default: 0.5): adjust the degree of style.
+- `--ckpt`: path of the VToonify-D model. By default, a VToonify-Dsd trained on cartoon style is loaded.
+- `--exstyle_path`: path of the extrinsic style code. By default, the cartoon style codes are loaded. 
+
 
 ## (2) Training VToonify
 
