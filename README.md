@@ -18,4 +18,4 @@ This work presents two instantiations of VToonify built upon Toonify and DualSty
 Extensive experimental results demonstrate the effectiveness of our proposed VToonify framework over existing methods in generating high-quality and temporally-coherent artistic portrait videos with flexible style controls.*
 
 **Features**:<br> 
-**High-Resolution Video** (>1024, support unaligned faces) | **Data-Friendly** (no real training data) | **Flexible Style Control**
+**High-Resolution Video** (>1024, support unaligned faces) | **Data-Friendly** (no real training data) | **Style Control**
