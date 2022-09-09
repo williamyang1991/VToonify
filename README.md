@@ -33,6 +33,11 @@ cd VToonify
 ```
 **Dependencies:**
 
+We have tested on:
+- CUDA 10.1
+- PyTorch 1.7.0
+- Pillow 8.3.1; Matplotlib 3.3.4; opencv-python 4.5.3; Faiss 1.7.1; tqdm 4.61.2; Ninja 1.10.2
+
 All dependencies for defining the environment are provided in `environment/vtoonify_env.yaml`.
 We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/):
 ```bash
