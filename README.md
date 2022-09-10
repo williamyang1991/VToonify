@@ -188,9 +188,10 @@ python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT tra
        --batch BATCH_SIZE --name SAVE_NAME                  # + ADDITIONAL STYLE CONTROL OPTIONS
 ```
 The models and the intermediate results are saved in `./checkpoint/SAVE_NAME/` and `./log/SAVE_NAME/`, respectively.
-STYLE CONTROL OPTIONS contain:
+
+VToonify-D provides the following STYLE CONTROL OPTIONS:
 - `--fix_degree`: if specified, model is trained with a fixed style degree (no degree adjustment)
-- `--fix_style`: if specified, model is trained with a fixed style image (no examplar-based style)
+- `--fix_style`: if specified, model is trained with a fixed style image (no examplar-based style transfer)
 - `--fix_color`: if specified, model is trained with color preservation (no color transfer)
 - `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/tree/main/doc_images)). 
 - `--style_degree` (default: 0.5): the degree of style.
@@ -204,6 +205,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --iter 2000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
        --batch 4 --name vtoonify_d_cartoon --fix_color 
 ```
+Eight GPUs are not necessary, one can train the model with a single GPU with larger `--iter`.
 
 
 ### Train VToonify-T
