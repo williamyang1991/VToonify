@@ -137,6 +137,18 @@ Specify `--video` to perform video toonification:
 python style_transfer.py --scale_image --content ./data/YOUR_VIDEO.mp4 --video
 ```
 
+### Style Transfer with VToonify-T
+
+Specify `--backbone` as ''toonify'' to load and use a VToonify-T model.
+```python
+python style_transfer.py --content ./data/unsplash-rDEOVtE7vOs.jpg \
+       --scale_image --backbone toonify
+       --ckpt ./checkpoint/vtoonify_t_cartoon/vtoonify.pt
+```
+In VToonify-T, `--style_id`, `--style_degree`, `--color_transfer`, `--exstyle_path` are not used.
+
+As with VToonify-D, specify `--video` to perform video toonification.
+
 ## (2) Training VToonify
 
 Download the supporting models to the `./checkpoint/` folder and arrange them in [this folder structure](./checkpoint/):
