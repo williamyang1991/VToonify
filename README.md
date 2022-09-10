@@ -173,19 +173,29 @@ Given the supporting models arranged in the [default folder structure](./checkpo
 ```python
 # for pre-training the encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
-       --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
+       --iter ITERATIONS --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
        --batch BATCH_SIZE --name SAVING_NAME --pretrain       # + ADDITIONAL STYLE CONTROL OPTIONS
 # for training VToonify-D given the pre-trained encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
-       --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
+       --iter ITERATIONS --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
        --batch BATCH_SIZE --name SAVING_NAME                  # + ADDITIONAL STYLE CONTROL OPTIONS
 ```
-Specify the STYLE CONTROL OPTIONS with the following options:
+STYLE CONTROL OPTIONS contain:
 - `--fix_degree`: if specified, model is trained with a fixed style degree (no degree adjustment)
 - `--fix_style`: if specified, model is trained with a fixed style image (no examplar-based style)
 - `--fix_color`: if specified, model is trained with color preservation (no color transfer)
 - `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/tree/main/doc_images)). 
 - `--style_degree` (default: 0.5): the degree of style.
+
+Here is an example to reproduce the VToonify-Dsd model on Cartoon style:
+```python
+python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_vtoonify_d.py \
+       --iter 30000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
+       --batch 1 --name vtoonify_d_cartoon --pretrain      
+python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_vtoonify_d.py \
+       --iter 2000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
+       --batch 4 --name vtoonify_d_cartoon --fix_color 
+```
 
 ### Train VToonify-T
 
