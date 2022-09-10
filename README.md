@@ -172,13 +172,13 @@ To customize your own style, you may need to train new Toonify/DualStyleGAN mode
 Given the supporting models arranged in the [default folder structure](./checkpoint/), we can simple pre-train the encoder and train the whole VToonify-D by running
 ```python
 # for pre-training the encoder
-python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py --batch BATCH_SIZE \
-       --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH --name SAVING_NAME --pretrain \
-       --OHTER_STYLE_OPTIONS
+python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
+       --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
+       --batch BATCH_SIZE --name SAVING_NAME --pretrain       # + ADDITIONAL STYLE CONTROL OPTIONS
 # for training VToonify-D given the pre-trained encoder
-python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py --batch BATCH_SIZE \
-       --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH --name SAVING_NAME \
-       --OHTER_STYLE_OPTIONS
+python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
+       --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
+       --batch BATCH_SIZE --name SAVING_NAME                  # + ADDITIONAL STYLE CONTROL OPTIONS
 ```
 
 ### Train VToonify-T
