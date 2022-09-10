@@ -208,7 +208,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --iter 2000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
        --batch 4 --name vtoonify_d_cartoon --fix_color --fix_degree --fix_style --style_id 299
 ```
-Note that the pre-trained encoder is shared by different STYLE CONTROL OPTIONS. VToonify-D only needs to pre-train the encoder once.
+Note that the pre-trained encoder is shared by different STYLE CONTROL OPTIONS. VToonify-D only needs to pre-train the encoder once for each DualStyleGAN model.
 Eight GPUs are not necessary, one can train the model with a single GPU with larger `--iter`.
 
 
