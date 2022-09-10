@@ -180,6 +180,12 @@ python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT tra
        --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
        --batch BATCH_SIZE --name SAVING_NAME                  # + ADDITIONAL STYLE CONTROL OPTIONS
 ```
+Specify the STYLE CONTROL OPTIONS with the following options:
+- `--fix_degree`: if specified, model is trained with a fixed style degree (no degree adjustment)
+- `--fix_style`: if specified, model is trained with a fixed style image (no examplar-based style)
+- `--fix_color`: if specified, model is trained with color preservation (no color transfer)
+- `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/tree/main/doc_images)). 
+- `--style_degree` (default: 0.5): the degree of style.
 
 ### Train VToonify-T
 
