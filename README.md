@@ -1,5 +1,7 @@
 # VToonify - Official PyTorch Implementation
 
+https://user-images.githubusercontent.com/18130694/189483939-0fc4a358-fb34-43cc-811a-b22adb820d57.mp4
+
 This repository provides the official PyTorch implementation for the following paper:
 
 **VToonify: Controllable High-Resolution Portrait Video Style Transfer**<br>
