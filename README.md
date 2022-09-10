@@ -106,6 +106,11 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
 
 The downloaded models are suggested to be arranged in [this folder structure](./checkpoint/).
 
+The VToonify-D models are named with suffixes to indicate the settings, where
+- `_s` means the model supports examplar-based style transfer while `_sXXX` means the model only support one fixed style with `XXX` the ID of this style.
+- `_d` means the model supports style degree adjustment while `_dXXX` means the model only support a fixed style degree of `XXX`.
+- `_c` means the model supports color transfer.
+
 ### Style Transfer with VToonify-D
 
 Transfer the style of a default Cartoon image onto a default face:
