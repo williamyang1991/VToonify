@@ -46,6 +46,7 @@ conda env create -f ./environment/vtoonify_env.yaml
 
 If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
 
+<br/>
 
 ## (1) Inference for Image/Video Toonification
 
@@ -143,12 +144,14 @@ The above style control options (`--style_id`, `--style_degree`, `--color_transf
 Specify `--backbone` as ''toonify'' to load and use a VToonify-T model.
 ```python
 python style_transfer.py --content ./data/unsplash-rDEOVtE7vOs.jpg \
-       --scale_image --backbone toonify
+       --scale_image --backbone toonify \
        --ckpt ./checkpoint/vtoonify_t_cartoon/vtoonify.pt
 ```
 In VToonify-T, `--style_id`, `--style_degree`, `--color_transfer`, `--exstyle_path` are not used.
 
 As with VToonify-D, specify `--video` to perform video toonification.
+
+<br/>
 
 ## (2) Training VToonify
 
