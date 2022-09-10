@@ -196,6 +196,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --iter 2000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
        --batch 4 --name vtoonify_d_cartoon --fix_color 
 ```
+The models are saved in ./checkpoint/vtoonify_d_cartoon/. Intermediate results are saved in ./log/vtoonify_d_cartoon/.
 
 ### Train VToonify-T
 
