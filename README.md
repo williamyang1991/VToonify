@@ -181,7 +181,7 @@ Given the supporting models arranged in the [default folder structure](./checkpo
 # for pre-training the encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
        --iter ITERATIONS --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
-       --batch BATCH_SIZE --name SAVE_NAME --pretrain       # + ADDITIONAL STYLE CONTROL OPTIONS
+       --batch BATCH_SIZE --name SAVE_NAME --pretrain
 # for training VToonify-D given the pre-trained encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
        --iter ITERATIONS --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
