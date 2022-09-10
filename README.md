@@ -196,7 +196,7 @@ VToonify-D provides the following STYLE CONTROL OPTIONS:
 - `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/tree/main/doc_images)). 
 - `--style_degree` (default: 0.5): the degree of style.
 
-Here is an example to reproduce the VToonify-Dsd on Cartoon style and the VToonify-D specialized for the 299-th cartoon style:
+Here is an example to reproduce the VToonify-Dsd on Cartoon style and the VToonify-D specialized for a mild toonification on the 26-th cartoon style:
 ```python
 python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_vtoonify_d.py \
        --iter 30000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
@@ -206,7 +206,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --batch 4 --name vtoonify_d_cartoon --fix_color 
 python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_vtoonify_d.py \
        --iter 2000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
-       --batch 4 --name vtoonify_d_cartoon --fix_color --fix_degree --fix_style --style_id 299
+       --batch 4 --name vtoonify_d_cartoon --fix_color --fix_degree --style_degree 0.5 --fix_style --style_id 26
 ```
 Note that the pre-trained encoder is shared by different STYLE CONTROL OPTIONS. VToonify-D only needs to pre-train the encoder once for each DualStyleGAN model.
 Eight GPUs are not necessary, one can train the model with a single GPU with larger `--iter`.
