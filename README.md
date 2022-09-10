@@ -111,13 +111,14 @@ Transfer the style of a default Cartoon image onto a default face:
 ```python
 python style_transfer.py --scale_image
 ```
-The results are saved in the folder `.\output\`, where `unsplash-rDEOVtE7vOs_input.jpg` is the rescaled input image to fit VToonify and 
+The results are saved in the folder `./output/`, where `unsplash-rDEOVtE7vOs_input.jpg` is the rescaled input image to fit VToonify and 
 `unsplash-rDEOVtE7vOs_vtoonify_d.jpg` is the result. 
 
 Specify the content image and the model, control the style with the following options:
 - `--content`: path to the target face image or video
 - `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/doc_images)). 
 - `--style_degree` (default: 0.5): adjust the degree of style.
+- `--color_transfer`(default: False): perform color transfer if loading a VToonify-Dsdc model.
 - `--ckpt`: path of the VToonify-D model. By default, a VToonify-Dsd trained on cartoon style is loaded.
 - `--exstyle_path`: path of the extrinsic style code. By default, the cartoon style codes are loaded.
 - `--scale_image`: rescale the input image/video to fit VToonify (recommend).
@@ -125,12 +126,16 @@ Specify the content image and the model, control the style with the following op
 
 Here is an example of arcane style transfer:
 ```python
-python style_transfer.py --scale_image --style_id 0 --style_degree 0.6 \
+python style_transfer.py --content ./data/unsplash-rDEOVtE7vOs.jpg \
+       --scale_image --style_id 0 --style_degree 0.6 \
        --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
        --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt
 ```
 
-
+Specify `--video` to perform video toonification:
+```python
+python style_transfer.py --scale_image --content ./data/YOUR_VIDEO.mp4 --video
+```
 
 ## (2) Training VToonify
 
