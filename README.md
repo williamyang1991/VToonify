@@ -116,7 +116,7 @@ The results are saved in the folder `./output/`, where `unsplash-rDEOVtE7vOs_inp
 
 Specify the content image and the model, control the style with the following options:
 - `--content`: path to the target face image or video
-- `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/doc_images)). 
+- `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/tree/main/doc_images)). 
 - `--style_degree` (default: 0.5): adjust the degree of style.
 - `--color_transfer`(default: False): perform color transfer if loading a VToonify-Dsdc model.
 - `--ckpt`: path of the VToonify-D model. By default, a VToonify-Dsd trained on cartoon style is loaded.
@@ -136,6 +136,7 @@ Specify `--video` to perform video toonification:
 ```python
 python style_transfer.py --scale_image --content ./data/YOUR_VIDEO.mp4 --video
 ```
+The above style control options (`--style_id`, `--style_degree`, `--color_transfer`) also work for videos.
 
 ### Style Transfer with VToonify-T
 
