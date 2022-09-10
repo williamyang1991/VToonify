@@ -174,12 +174,13 @@ Given the supporting models arranged in the [default folder structure](./checkpo
 # for pre-training the encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
        --iter ITERATIONS --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
-       --batch BATCH_SIZE --name SAVING_NAME --pretrain       # + ADDITIONAL STYLE CONTROL OPTIONS
+       --batch BATCH_SIZE --name SAVE_NAME --pretrain       # + ADDITIONAL STYLE CONTROL OPTIONS
 # for training VToonify-D given the pre-trained encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
        --iter ITERATIONS --stylegan_path DUALSTYLEGAN_PATH --exstyle_path EXSTYLE_CODE_PATH \
-       --batch BATCH_SIZE --name SAVING_NAME                  # + ADDITIONAL STYLE CONTROL OPTIONS
+       --batch BATCH_SIZE --name SAVE_NAME                  # + ADDITIONAL STYLE CONTROL OPTIONS
 ```
+The models and the intermediate results are saved in `./checkpoint/SAVE_NAME/` and `./log/SAVE_NAME/`, respectively.
 STYLE CONTROL OPTIONS contain:
 - `--fix_degree`: if specified, model is trained with a fixed style degree (no degree adjustment)
 - `--fix_style`: if specified, model is trained with a fixed style image (no examplar-based style)
@@ -196,7 +197,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --iter 2000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
        --batch 4 --name vtoonify_d_cartoon --fix_color 
 ```
-The models are saved in ./checkpoint/vtoonify_d_cartoon/. Intermediate results are saved in ./log/vtoonify_d_cartoon/.
+
 
 ### Train VToonify-T
 
