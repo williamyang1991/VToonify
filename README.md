@@ -238,6 +238,12 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --batch 4 --name vtoonify_t_arcane --weight 0.5 0.5 0.5 0.5 0.5 0.5 0.5 1 1 1 1 1 1 1 1 1 1 1
 ```
 
+## (3) Results
+
+### Video toonification
+
+
+
 ## Citation
 
 If you find this work useful for your research, please consider citing our paper:
