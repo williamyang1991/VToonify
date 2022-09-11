@@ -255,7 +255,7 @@ https://user-images.githubusercontent.com/18130694/189510094-4378caca-e8d9-48e1-
 
 ### Face toonification on more styles
 
-Here are the interpolated results of VToonify-D and VToonify-Dc on Arcane, Pixar and Comic styles.
+Here are the color interpolated results of VToonify-D and VToonify-Dc on Arcane, Pixar and Comic styles.
 
 https://user-images.githubusercontent.com/18130694/189510233-b4e3b4f7-5a37-4e0c-9821-a8049ce5f781.mp4
 
