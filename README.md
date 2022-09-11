@@ -124,8 +124,7 @@ Transfer a default cartoon style onto a default face image `./data/077436.jpg`:
 ```python
 python style_transfer.py --scale_image
 ```
-The results are saved in the folder `./output/`, where `077436_input.jpg` is the rescaled input image to fit VToonify and 
-`077436_vtoonify_d.jpg` is the result. 
+The results are saved in the folder `./output/`, where `077436_input.jpg` is the rescaled input image to fit VToonify (this image can serve as the input without `--scale_image`) and `077436_vtoonify_d.jpg` is the result.
 
 ![077436_overview](https://user-images.githubusercontent.com/18130694/189530937-eb468f96-ac02-4f33-8621-03cb93d17e73.jpg)
 
@@ -136,7 +135,7 @@ Specify the content image and the model, control the style with the following op
 - `--color_transfer`(default: False): perform color transfer if loading a VToonify-Dsdc model.
 - `--ckpt`: path of the VToonify-D model. By default, a VToonify-Dsd trained on cartoon style is loaded.
 - `--exstyle_path`: path of the extrinsic style code. By default, the cartoon style codes are loaded.
-- `--scale_image`: rescale the input image/video to fit VToonify (recommend).
+- `--scale_image`: rescale the input image/video to fit VToonify (highly recommend).
 - `--padding` (default: 200, 200, 200, 200): left, right, top, bottom paddings to the eye center.
 
 Here is an example of arcane style transfer:
