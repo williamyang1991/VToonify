@@ -159,9 +159,10 @@ The above style control options (`--style_id`, `--style_degree`, `--color_transf
 
 Specify `--backbone` as ''toonify'' to load and use a VToonify-T model.
 ```python
-python style_transfer.py --content ./data/unsplash-rDEOVtE7vOs.jpg \
+python style_transfer.py --content ./data/038648.jpg \
        --scale_image --backbone toonify \
-       --ckpt ./checkpoint/vtoonify_t_cartoon/vtoonify.pt
+       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt \
+       --padding 600 600 600 600     # use large padding to avoid cropping the image
 ```
 In VToonify-T, `--style_id`, `--style_degree`, `--color_transfer`, `--exstyle_path` are not used.
 
