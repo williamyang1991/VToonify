@@ -141,7 +141,7 @@ Specify the content image and the model, control the style with the following op
 
 Here is an example of arcane style transfer:
 ```python
-python style_transfer.py --content ./data/unsplash-rDEOVtE7vOs.jpg \
+python style_transfer.py --content ./data/077540.jpg \
        --scale_image --style_id 0 --style_degree 0.6 \
        --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
        --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt
