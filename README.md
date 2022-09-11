@@ -249,7 +249,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
 
 ### Flexible style control
 
-Our framework is compatible with the existing StyleGAN-based image toonification models to extend them to video toonification, and inherits their appealing features for flexible style control. With DualStyleGAN as the backbone, our VToonify is able to transfer the style of various examplar images and adjust the style degree in one model.
+Our framework is compatible with the existing StyleGAN-based image toonification models to extend them to video toonification, and inherits their appealing features for flexible style control. With DualStyleGAN as the backbone, our VToonify is able to transfer the style of various reference images and adjust the style degree in one model.
 
 https://user-images.githubusercontent.com/18130694/189510094-4378caca-e8d9-48e1-9e5d-c8ec038e4bc5.mp4
 
