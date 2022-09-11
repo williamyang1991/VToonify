@@ -120,12 +120,14 @@ The VToonify-D models are named with suffixes to indicate the settings, where
 
 ### Style Transfer with VToonify-D
 
-Transfer the style of a default Cartoon image onto a default face:
+Transfer a default cartoon style onto a default face image `./data/077436.jpg`:
 ```python
 python style_transfer.py --scale_image
 ```
-The results are saved in the folder `./output/`, where `unsplash-rDEOVtE7vOs_input.jpg` is the rescaled input image to fit VToonify and 
-`unsplash-rDEOVtE7vOs_vtoonify_d.jpg` is the result. 
+The results are saved in the folder `./output/`, where `077436_input.jpg` is the rescaled input image to fit VToonify and 
+`077436_vtoonify_d.jpg` is the result. 
+
+![077436_overview](https://user-images.githubusercontent.com/18130694/189530583-669c0ff8-ea0e-4c45-a8c8-f226a6631a2d.jpg)
 
 Specify the content image and the model, control the style with the following options:
 - `--content`: path to the target face image or video
