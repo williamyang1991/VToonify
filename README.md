@@ -127,7 +127,7 @@ python style_transfer.py --scale_image
 The results are saved in the folder `./output/`, where `077436_input.jpg` is the rescaled input image to fit VToonify and 
 `077436_vtoonify_d.jpg` is the result. 
 
-![077436_overview](https://user-images.githubusercontent.com/18130694/189530583-669c0ff8-ea0e-4c45-a8c8-f226a6631a2d.jpg)
+![077436_overview](https://user-images.githubusercontent.com/18130694/189530937-eb468f96-ac02-4f33-8621-03cb93d17e73.jpg)
 
 Specify the content image and the model, control the style with the following options:
 - `--content`: path to the target face image or video
