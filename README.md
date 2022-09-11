@@ -164,6 +164,8 @@ python style_transfer.py --content ./data/038648.jpg \
        --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt \
        --padding 600 600 600 600     # use large padding to avoid cropping the image
 ```
+![arcane2](https://user-images.githubusercontent.com/18130694/189540365-d04ffb2a-d72f-4ada-a2a8-89b8ac9ea441.jpg)
+
 In VToonify-T, `--style_id`, `--style_degree`, `--color_transfer`, `--exstyle_path` are not used.
 
 As with VToonify-D, specify `--video` to perform video toonification.
