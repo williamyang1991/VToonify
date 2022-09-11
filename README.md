@@ -257,10 +257,7 @@ https://user-images.githubusercontent.com/18130694/189510094-4378caca-e8d9-48e1-
 
 Here are the color interpolated results of VToonify-D and VToonify-Dc on Arcane, Pixar and Comic styles.
 
-<!--https://user-images.githubusercontent.com/18130694/189510233-b4e3b4f7-5a37-4e0c-9821-a8049ce5f781.mp4-->
-
-<video src="https://user-images.githubusercontent.com/18130694/189510233-b4e3b4f7-5a37-4e0c-9821-a8049ce5f781.mp4" data-canonical-src="https://user-images.githubusercontent.com/18130694/189510233-b4e3b4f7-5a37-4e0c-9821-a8049ce5f781.mp4" autoplay loop muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;" __idm_id__="573444">
-</video>
+https://user-images.githubusercontent.com/18130694/189510233-b4e3b4f7-5a37-4e0c-9821-a8049ce5f781.mp4
 
 ## Citation
 
