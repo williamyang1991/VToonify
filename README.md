@@ -141,12 +141,15 @@ Specify the content image and the model, control the style with the following op
 
 Here is an example of arcane style transfer:
 ```python
-python style_transfer.py --content ./data/077540.jpg \
-       --scale_image --style_id 0 --style_degree 0.6 \
+python style_transfer.py --content ./data/038648.jpg \
+       --scale_image --style_id 77 --style_degree 0.5 \
        --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
-       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt
+       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt \
+       --padding 600 600 600 600     # use large padding to avoid cropping the image
+       
 ```
-![arcane](https://user-images.githubusercontent.com/18130694/189531959-42d2173d-bc1e-44d9-8923-43873d811495.jpg)
+![arcane](https://user-images.githubusercontent.com/18130694/189533139-94c3d086-7fe9-49f9-b31f-dbd2a4798e9f.jpg)
+
 
 Specify `--video` to perform video toonification:
 ```python
