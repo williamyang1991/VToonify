@@ -146,6 +146,7 @@ python style_transfer.py --content ./data/unsplash-rDEOVtE7vOs.jpg \
        --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
        --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt
 ```
+![arcane](https://user-images.githubusercontent.com/18130694/189531959-42d2173d-bc1e-44d9-8923-43873d811495.jpg)
 
 Specify `--video` to perform video toonification:
 ```python
