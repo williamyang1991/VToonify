@@ -146,7 +146,6 @@ python style_transfer.py --content ./data/038648.jpg \
        --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
        --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt \
        --padding 600 600 600 600     # use large padding to avoid cropping the image
-       
 ```
 ![arcane](https://user-images.githubusercontent.com/18130694/189533139-94c3d086-7fe9-49f9-b31f-dbd2a4798e9f.jpg)
 
