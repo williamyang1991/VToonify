@@ -66,46 +66,46 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
 
 <table>
     <tr>
-        <th>Backbone</th><th>Style</th><th>Model and extrinsic style code link</th>
+        <th>Backbone</th><th>Model</th><th>Description</th>
     </tr>
     <tr>
-        <td rowspan="5">DualStyleGAN</td><td>cartoon</td><td>pre-trained VToonify-D and 317 cartoon style codes</td>
+        <td rowspan="5">DualStyleGAN</td><td>cartoon</td><td>pre-trained VToonify-D models and 317 cartoon style codes</td>
     </tr>
     <tr>
-        <td>caricature</td><td>pre-trained VToonify-D and 199 caricature style codes</td>
+        <td>caricature</td><td>pre-trained VToonify-D models and 199 caricature style codes</td>
     </tr>
     <tr>
-        <td>arcane</td><td>pre-trained VToonify-D and 100 arcane style codes</td>
+        <td>arcane</td><td>pre-trained VToonify-D models and 100 arcane style codes</td>
     </tr> 
     <tr>
-        <td>comic</td><td>pre-trained VToonify-D and 101 comic style codes</td>
+        <td>comic</td><td>pre-trained VToonify-D models and 101 comic style codes</td>
     </tr>   
     <tr>
-        <td>pixar</td><td>pre-trained VToonify-D and 122 pixar style codes</td>
+        <td>pixar</td><td>pre-trained VToonify-D models and 122 pixar style codes</td>
     </tr>   
     <tr>
-        <td rowspan="5">Toonify</td><td>cartoon</td><td>pre-trained VToonify-T</td>
+        <td rowspan="5">Toonify</td><td>cartoon</td><td>pre-trained VToonify-T model</td>
     </tr>
     <tr>
-        <td>caricature</td><td>pre-trained VToonify-T</td>
+        <td>caricature</td><td>pre-trained VToonify-T model</td>
     </tr>
     <tr>
-        <td>arcane</td><td>pre-trained VToonify-T</td>
+        <td>arcane</td><td>pre-trained VToonify-T model</td>
     </tr> 
     <tr>
-        <td>comic</td><td>pre-trained VToonify-T</td>
+        <td>comic</td><td>pre-trained VToonify-T model</td>
     </tr>   
     <tr>
-        <td>pixar</td><td>pre-trained VToonify-T</td>
+        <td>pixar</td><td>pre-trained VToonify-T model</td>
     </tr>   
     <tr>
-        <th colspan="2">Supporting model</th><th>Model link</th>
+        <th colspan="2">Supporting model</th><th> </th>
     </tr>
     <tr>
-        <td colspan="2">Pixel2style2pixel encoder</td><td><a href="https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing">encoder.pt</a></td>
+        <td colspan="2"><a href="https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing">encoder.pt</a></td><td>Pixel2style2pixel encoder</td>
     </tr>  
     <tr>
-        <td colspan="2">BiSeNet for face parsing</td><td><a href="">faceparsing.pth</a></td>
+        <td colspan="2"><a href="">faceparsing.pth</a></td><td>BiSeNet for face parsing</td>
     </tr>      
 </table>
 
