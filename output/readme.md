@@ -5,14 +5,15 @@ Here are the examples to reproduce the toonification results in this folder.
 ```python
 python style_transfer.py --scale_image --content ./data/529.mp4 --video
 ```
-
 #### 077436_vtoonify_d.jpg
+<img src="./077436_vtoonify_d.jpg" width=25%>
 
 ```python
 python style_transfer.py --scale_image
 ```
 
 #### 081680_vtoonify_d.jpg
+<img src="./081680_vtoonify_d.jpg" width=25%>
 
 ```python
 python style_transfer.py --scale_image --content ./data/081680.jpg \
@@ -20,6 +21,7 @@ python style_transfer.py --scale_image --content ./data/081680.jpg \
 ```
 
 #### 038648_vtoonify_d.jpg
+<img src="./038648_vtoonify_d.jpg" width=25%>
 
 ```python
 python style_transfer.py --content ./data/038648.jpg \
@@ -28,6 +30,7 @@ python style_transfer.py --content ./data/038648.jpg \
 ```
 
 #### 038648_vtoonify_t.jpg
+<img src="./038648_vtoonify_t.jpg" width=25%>
 
 ```python
 python style_transfer.py --content ./data/038648.jpg \
@@ -36,6 +39,7 @@ python style_transfer.py --content ./data/038648.jpg \
 ```
 
 #### 077559_vtoonify_d.jpg
+<img src="./077559_vtoonify_d.jpg" width=25%>
 
 ```python
 python style_transfer.py --content ./data/077559.jpg \
@@ -44,6 +48,7 @@ python style_transfer.py --content ./data/077559.jpg \
 ```
 
 #### 077559_vtoonify_t.jpg
+<img src="./077559_vtoonify_t.jpg" width=25%>
 
 ```python
 python style_transfer.py --content ./data/077559.jpg \
