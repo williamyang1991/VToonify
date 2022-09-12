@@ -32,7 +32,7 @@ python style_transfer.py --content ./data/038648.jpg \
 ```python
 python style_transfer.py --content ./data/038648.jpg \
        --scale_image --padding 600 600 600 600 --backbone toonify \
-       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify_s_d.pt \
+       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt \
 ```
 
 #### 077559_vtoonify_d.jpg
@@ -48,5 +48,5 @@ python style_transfer.py --content ./data/077559.jpg \
 ```python
 python style_transfer.py --content ./data/077559.jpg \
        --scale_image --padding 600 600 600 600 --backbone toonify \
-       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify_s_d.pt \
+       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt \
 ```
