@@ -62,7 +62,7 @@ The notebook will download the necessary pretrained models and run inference on 
 
 ### Pre-trained Models
 
-Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (access code: sigg):
+Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1Nmbz9zBM78I1nRVokhHLuBKHleDmjDxv?usp=sharing) or [Baidu Cloud]() (access code: sigg):
 
 <table>
     <tr>
@@ -105,7 +105,7 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
         <td colspan="2"><a href="https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing">encoder.pt</a></td><td>Pixel2style2pixel encoder to map real faces into Z+ space of StyleGAN</td>
     </tr>  
     <tr>
-        <td colspan="2"><a href="https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view">faceparsing.pth</a></td><td>BiSeNet for face parsing from <a href="https://github.com/zllrunning/face-parsing.PyTorch">face-parsing.PyTorch</a></td>
+        <td colspan="2"><a href="https://drive.google.com/file/d/1jY0mTjVB8njDh6e0LP_2UxuRK3MnjoIR/view">faceparsing.pth</a></td><td>BiSeNet for face parsing from <a href="https://github.com/zllrunning/face-parsing.PyTorch">face-parsing.PyTorch</a></td>
     </tr>      
 </table>
 
@@ -182,10 +182,10 @@ Download the supporting models to the `./checkpoint/` folder and arrange them in
 | Model | Description |
 | :--- | :--- |
 | [stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view) | StyleGAN model trained on FFHQ taken from [rosinality](https://github.com/rosinality/stylegan2-pytorch) |
-| [encoder.pt](https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing) | Pixel2style2pixel encoder that embeds FFHQ images into StyleGAN2 Z+ latent code |
-| [faceparsing.pth](https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view) | BiSeNet for face parsing from [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch) |
-| [directions.npy]() | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
-| [Toonify](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) \| [DualStyleGAN](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) | pre-trained stylegan-based toonification models|
+| [encoder.pt](https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view) | Pixel2style2pixel encoder that embeds FFHQ images into StyleGAN2 Z+ latent code |
+| [faceparsing.pth](https://drive.google.com/file/d/1jY0mTjVB8njDh6e0LP_2UxuRK3MnjoIR/view) | BiSeNet for face parsing from [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch) |
+| [directions.npy](https://drive.google.com/file/d/1HbjmOIOfxqTAVScZOI2m7_tPgMPnc0uM/view) | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
+| [Toonify](https://drive.google.com/drive/folders/1GZQ6Gs5AzJq9lUL-ldIQexi0JYPKNy8b) \| [DualStyleGAN](https://drive.google.com/drive/folders/1GZQ6Gs5AzJq9lUL-ldIQexi0JYPKNy8b) | pre-trained stylegan-based toonification models|
 
 To customize your own style, you may need to train new Toonify/DualStyleGAN model following [here](https://github.com/williamyang1991/DualStyleGAN#3-training-dualstylegan).
 
