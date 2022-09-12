@@ -120,6 +120,8 @@ The VToonify-D models are named with suffixes to indicate the settings, where
 
 ### Style Transfer with VToonify-D
 
+**✔ A quick start [HERE](./output#readme)**
+
 Transfer a default cartoon style onto a default face image `./data/077436.jpg`:
 ```python
 python style_transfer.py --scale_image
@@ -153,6 +155,8 @@ Specify `--video` to perform video toonification:
 python style_transfer.py --scale_image --content ./data/YOUR_VIDEO.mp4 --video
 ```
 The above style control options (`--style_id`, `--style_degree`, `--color_transfer`) also work for videos.
+
+
 
 ### Style Transfer with VToonify-T
 
