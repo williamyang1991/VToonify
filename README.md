@@ -69,34 +69,34 @@ Pre-trained models can be downloaded from [Google Drive](https://drive.google.co
         <th>Backbone</th><th>Model</th><th>Description</th>
     </tr>
     <tr>
-        <td rowspan="5">DualStyleGAN</td><td>cartoon</td><td>pre-trained VToonify-D models and 317 cartoon style codes</td>
+        <td rowspan="5">DualStyleGAN</td><td><a href="https://drive.google.com/drive/folders/1DuZfXt6b_xhTAQSN0D8m7N1np0Web0Ky">cartoon</a></td><td>pre-trained VToonify-D models and 317 cartoon style codes</td>
     </tr>
     <tr>
-        <td>caricature</td><td>pre-trained VToonify-D models and 199 caricature style codes</td>
+        <td><a href="https://drive.google.com/drive/folders/12TzTQqwBedsYX3kE_420mdTbWl9lwv4Y">caricature</a></td><td>pre-trained VToonify-D models and 199 caricature style codes</td>
     </tr>
     <tr>
-        <td>arcane</td><td>pre-trained VToonify-D models and 100 arcane style codes</td>
+        <td><a href="https://drive.google.com/drive/folders/1MpEqS26Q1ngTPeex_4MN9qOJxfXKH-k-">arcane</a></td><td>pre-trained VToonify-D models and 100 arcane style codes</td>
     </tr> 
     <tr>
-        <td>comic</td><td>pre-trained VToonify-D models and 101 comic style codes</td>
+        <td><a href="https://drive.google.com/drive/folders/15mxb7DxTzEBrKtx5aJ_I5WGDjSWBmcUi">comic</a></td><td>pre-trained VToonify-D models and 101 comic style codes</td>
     </tr>   
     <tr>
-        <td>pixar</td><td>pre-trained VToonify-D models and 122 pixar style codes</td>
+        <td><a href="https://drive.google.com/drive/folders/1Hld7OeZqYBrg6r35IA_x4sNtt1abHUMU">pixar</a></td><td>pre-trained VToonify-D models and 122 pixar style codes</td>
     </tr>   
     <tr>
-        <td rowspan="5">Toonify</td><td>cartoon</td><td>pre-trained VToonify-T model</td>
+        <td rowspan="5">Toonify</td><td><a href="https://drive.google.com/drive/folders/1FFtTVgiDKZ_InnwUJLDuA1wfghZp41nX">cartoon</a></td><td>pre-trained VToonify-T model</td>
     </tr>
     <tr>
-        <td>caricature</td><td>pre-trained VToonify-T model</td>
+        <td><a href="https://drive.google.com/drive/folders/1ReRxttV-macgV3epC61qg4TQ3FGAhGqG">caricature</a></td><td>pre-trained VToonify-T model</td>
     </tr>
     <tr>
-        <td>arcane</td><td>pre-trained VToonify-T model</td>
+        <td><a href="https://drive.google.com/drive/folders/1OXU95BOCCT0f6pGbwQ4yQ1EHb2LPd2yb">arcane</td></a><td>pre-trained VToonify-T model</td>
     </tr> 
     <tr>
-        <td>comic</td><td>pre-trained VToonify-T model</td>
+        <td><a href="https://drive.google.com/drive/folders/1KvawsOXzKgwDM3Z27sagO_KGE_Kc5GZS">comic</td></a><td>pre-trained VToonify-T model</td>
     </tr>   
     <tr>
-        <td>pixar</td><td>pre-trained VToonify-T model</td>
+        <td><a href="https://drive.google.com/drive/folders/19N4ddcTXhXbTEayTbrFc533EktbhOXMz">pixar</td></a><td>pre-trained VToonify-T model</td>
     </tr>   
     <tr>
         <th colspan="2">Supporting model</th><th> </th>
