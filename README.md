@@ -179,7 +179,7 @@ Download the supporting models to the `./checkpoint/` folder and arrange them in
 | :--- | :--- |
 | [stylegan2-ffhq-config-f.pt](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view) | StyleGAN model trained on FFHQ taken from [rosinality](https://github.com/rosinality/stylegan2-pytorch) |
 | [encoder.pt](https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing) | Pixel2style2pixel encoder that embeds FFHQ images into StyleGAN2 Z+ latent code |
-| [faceparsing.pth]() | [BiSeNet](https://github.com/zllrunning/face-parsing.PyTorch) that predicts face parsing maps |
+| [faceparsing.pth](https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view) | BiSeNet for face parsing from [face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch) |
 | [directions.npy]() | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
 | [Toonify](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) \| [DualStyleGAN](https://github.com/williamyang1991/DualStyleGAN#pretrained-models) | pre-trained stylegan-based toonification models|
 
