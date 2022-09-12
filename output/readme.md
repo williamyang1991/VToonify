@@ -21,7 +21,7 @@ python style_transfer.py --scale_image
 
 ```python
 python style_transfer.py --scale_image --content ./data/081680.jpg \
-       --ckpt ./checkpoint/vtoonify_d_cartoon/vtoonify_s026_d0.5.pt
+       --ckpt ./checkpoint/vtoonify_d_cartoon/vtoonify_s026_d0.5.pt # specific model has better performance
 ```
 <br/>
 
