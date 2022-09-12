@@ -242,7 +242,7 @@ python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT tra
        --batch BATCH_SIZE --name SAVE_NAME                  # + ADDITIONAL STYLE CONTROL OPTION
 ```
 VToonify-T only has one STYLE CONTROL OPTION:
- - `--weight` (default: 1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0): 18 numbers indicate how the 18 layers of the ffhq stylegan model and the finetuned model are blended to obtain the final Toonify model. Please refer to [toonify](https://github.com/justinpinkney/toonify) for the details.
+ - `--weight` (default: 1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0): 18 numbers indicate how the 18 layers of the ffhq stylegan model and the finetuned model are blended to obtain the final Toonify model. [Here](https://github.com/williamyang1991/VToonify/blob/edfd68e96eb0c0ab4c31628feef1b667e890a2cd/train_vtoonify_t.py#L30) are the `--weight` we use in the paper for different styles. Please refer to [toonify](https://github.com/justinpinkney/toonify) for the details.
 
 Here is an example to reproduce the VToonify-T model on Arcane style:
 ```python
@@ -253,6 +253,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
        --iter 2000 --finetunegan_path ./checkpoint/arcane/finetune-000600.pt \
        --batch 4 --name vtoonify_t_arcane --weight 0.5 0.5 0.5 0.5 0.5 0.5 0.5 1 1 1 1 1 1 1 1 1 1 1
 ```
+
 
 <br/>
 
