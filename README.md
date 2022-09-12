@@ -63,7 +63,7 @@ The notebook will download the necessary pretrained models and run inference on 
 
 ### Pre-trained Models
 
-Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1Nmbz9zBM78I1nRVokhHLuBKHleDmjDxv?usp=sharing) or [Baidu Cloud]() (access code: sigg):
+Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1Nmbz9zBM78I1nRVokhHLuBKHleDmjDxv?usp=sharing) or [Baidu Cloud](链接：https://pan.baidu.com/s/1Io3PKNV1wD7ttxaVz-MPww?pwd=sigg) (access code: sigg):
 
 <table>
     <tr>
