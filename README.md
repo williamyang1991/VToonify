@@ -105,7 +105,7 @@ Pre-trained models can be downloaded from [Google Drive]() or [Baidu Cloud]() (a
         <td colspan="2"><a href="https://drive.google.com/file/d/1NgI4mPkboYvYw3MWcdUaQhkr0OWgs9ej/view?usp=sharing">encoder.pt</a></td><td>Pixel2style2pixel encoder to map real faces into Z+ space of StyleGAN</td>
     </tr>  
     <tr>
-        <td colspan="2"><a href="">faceparsing.pth</a></td><td>BiSeNet for face parsing</td>
+        <td colspan="2"><a href="https://drive.google.com/file/d/154JgKpzCPW82qINcVieuPH3fZ2e0P812/view">faceparsing.pth</a></td><td>BiSeNet for face parsing from <a href="https://github.com/zllrunning/face-parsing.PyTorch">face-parsing.PyTorch</a></td>
     </tr>      
 </table>
 
