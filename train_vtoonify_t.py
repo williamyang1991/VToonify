@@ -27,6 +27,12 @@ from model.stylegan.distributed import (
     get_world_size,
 )
 
+# In the paper, --weight for each style is set as follows,
+# cartoon: default
+# caricature: default
+# pixar: 1 1 1 1 1 1 1 1 1 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+# comic: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 1 1 1 1 1 1 1 1 1 1 1
+# arcane: 0.5 0.5 0.5 0.5 0.5 0.5 0.5 1 1 1 1 1 1 1 1 1 1 1
 
 class TrainOptions():
     def __init__(self):
