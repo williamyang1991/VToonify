@@ -134,7 +134,7 @@ Specify the content image and the model, control the style with the following op
 - `--style_degree` (default: 0.5): adjust the degree of style.
 - `--color_transfer`(default: False): perform color transfer if loading a VToonify-Dsdc model.
 - `--ckpt`: path of the VToonify-D model. By default, a VToonify-Dsd trained on cartoon style is loaded.
-- `--exstyle_path`: path of the extrinsic style code. By default, the cartoon style codes are loaded.
+- `--exstyle_path`: path of the extrinsic style code. By default, codes in the same directory as `--ckpt` are loaded.
 - `--scale_image`: rescale the input image/video to fit VToonify (highly recommend).
 - `--padding` (default: 200, 200, 200, 200): left, right, top, bottom paddings to the eye center.
 
