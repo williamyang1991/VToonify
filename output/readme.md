@@ -1,7 +1,7 @@
 Here are the examples to reproduce the toonification results in this folder.
 
 #### 529_vtoonify_d.mp4
-https://user-images.githubusercontent.com/18130694/189573234-c2a19208-e93a-497f-ad90-a6fb942543d2.mp4
+https://user-images.githubusercontent.com/18130694/189574934-85954bd6-0e2d-4568-9687-df7a8776ace5.mp4
 
 ```python
 python style_transfer.py --scale_image --content ./data/529.mp4 --video
