@@ -14,8 +14,8 @@ checkpoint
 |--vtoonify_d_cartoon
     |--pretrain.pt                        % * Pre-trained encoder for Cartoon style
     |--exstyle_code.npy                   % Extrinsic style codes of Cartoon dataset
-    |--vtoonify_s_d_c.pt                  % VToonify-Dsdc model for Cartoon style
-    |--vtoonify_s_d.pt                    % VToonify-Dsd model for Cartoon style
+    |--vtoonify_s_d.pt                  % VToonify-Dsdc model for Cartoon style
+    |--vtoonify_s_d_c.pt                    % VToonify-Dsd model for Cartoon style
     |--vtoonify_s026_d0.5.pt              % VToonify-D model for the 26th Cartoon style with style degree 0.5
     ...                                   % VToonify-D model for other settings
 |--vtoonify_t_caricature
