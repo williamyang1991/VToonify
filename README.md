@@ -142,7 +142,6 @@ Here is an example of arcane style transfer:
 ```python
 python style_transfer.py --content ./data/038648.jpg \
        --scale_image --style_id 77 --style_degree 0.5 \
-       --exstyle_path ./checkpoint/arcane/exstyle_code.npy \
        --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt \
        --padding 600 600 600 600     # use large padding to avoid cropping the image
 ```
