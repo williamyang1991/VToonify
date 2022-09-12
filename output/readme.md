@@ -1,4 +1,4 @@
-Here is the examples to reproduce the toonification results in this folder.
+Here are the examples to reproduce the toonification results in this folder.
 
 #### 529_vtoonify_d.mp4
 
