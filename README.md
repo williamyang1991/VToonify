@@ -9,7 +9,7 @@ This repository provides the official PyTorch implementation for the following p
 In ACM TOG (Proceedings of SIGGRAPH Asia), 2022.<br>
 [**Project Page**](https://www.mmlab-ntu.com/project/vtoonify/) | [**Paper**](#) | [**Supplementary Video**](#)<br>
 
-<a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)
+<a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)
 > **Abstract:** *Generating high-quality artistic portrait videos is an important and desirable task in computer graphics and vision.
 Although a series of successful portrait image toonification models built upon the powerful StyleGAN have been proposed,
 these image-oriented methods have obvious limitations when applied to videos, such as the fixed frame size, the requirement of face alignment, missing non-facial details and temporal inconsistency.
@@ -57,7 +57,7 @@ If you have a problem regarding the cpp extention (fused and upfirdn2d), or no G
 ## (1) Inference for Image/Video Toonification
 
 ### Inference Notebook 
-<a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>  
+<a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>  
 To help users get started, we provide a Jupyter notebook found in `./notebooks/inference_playground.ipynb` that allows one to visualize the performance of VToonify.
 The notebook will download the necessary pretrained models and run inference on the images found in `./data/`.
 
