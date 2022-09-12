@@ -31,7 +31,7 @@ python style_transfer.py --scale_image --content ./data/081680.jpg \
 ```python
 python style_transfer.py --content ./data/038648.jpg \
        --scale_image --padding 600 600 600 600 --style_id 77 \
-       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt \
+       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt 
 ```
 <br/>
 
@@ -41,7 +41,7 @@ python style_transfer.py --content ./data/038648.jpg \
 ```python
 python style_transfer.py --content ./data/038648.jpg \
        --scale_image --padding 600 600 600 600 --backbone toonify \
-       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt \
+       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt 
 ```
 <br/>
 
@@ -51,7 +51,7 @@ python style_transfer.py --content ./data/038648.jpg \
 ```python
 python style_transfer.py --content ./data/077559.jpg \
        --scale_image --padding 600 600 600 600 --style_id 77 \
-       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt \
+       --ckpt ./checkpoint/vtoonify_d_arcane/vtoonify_s_d.pt 
 ```
 <br/>
 
@@ -61,5 +61,5 @@ python style_transfer.py --content ./data/077559.jpg \
 ```python
 python style_transfer.py --content ./data/077559.jpg \
        --scale_image --padding 600 600 600 600 --backbone toonify \
-       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt \
+       --ckpt ./checkpoint/vtoonify_t_arcane/vtoonify.pt 
 ```
