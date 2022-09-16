@@ -227,6 +227,8 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
 Note that the pre-trained encoder is shared by different STYLE CONTROL OPTIONS. VToonify-D only needs to pre-train the encoder once for each DualStyleGAN model.
 Eight GPUs are not necessary, one can train the model with a single GPU with larger `--iter`.
 
+**Tips**: [how to find an ideal model] we can first train a versatile model VToonify-Dsd, 
+and navigate around different styles and degrees. After finding the ideal setting, we can then train the model specialized in that setting for high-quality stylization.
 
 ### Train VToonify-T
 
