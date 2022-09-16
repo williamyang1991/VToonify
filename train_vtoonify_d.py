@@ -55,7 +55,7 @@ class TrainOptions():
         self.parser.add_argument("--style_degree", type=float, default=0.5, help="style degree for VToonify-D")
         
         self.parser.add_argument("--encoder_path", type=str, default=None, help="path to the pretrained encoder model")    
-        self.parser.add_argument("--direction_path", type=str, default='./checkpoint/derections.npy', help="path to the editing direction latents")
+        self.parser.add_argument("--direction_path", type=str, default='./checkpoint/directions.npy', help="path to the editing direction latents")
         self.parser.add_argument("--stylegan_path", type=str, default='./checkpoint/cartoon/generator.pt', help="path to the stylegan model")
         self.parser.add_argument("--faceparsing_path", type=str, default='./checkpoint/faceparsing.pth', help="path of the face parsing model")
         self.parser.add_argument("--style_encoder_path", type=str, default='./checkpoint/encoder.pt', help="path of the style encoder")
