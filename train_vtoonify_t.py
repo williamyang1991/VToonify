@@ -53,7 +53,7 @@ class TrainOptions():
         self.parser.add_argument("--tmp_loss", type=float, default=1.0, help="the weight of temporal consistency loss")
         
         self.parser.add_argument("--encoder_path", type=str, default=None, help="path to the pretrained encoder model")    
-        self.parser.add_argument("--direction_path", type=str, default='./checkpoint/derections.npy', help="path to the editing direction latents")
+        self.parser.add_argument("--direction_path", type=str, default='./checkpoint/directions.npy', help="path to the editing direction latents")
         self.parser.add_argument("--stylegan_path", type=str, default='./checkpoint/stylegan2-ffhq-config-f.pt', help="path to the stylegan model")
         self.parser.add_argument("--finetunegan_path", type=str, default='./checkpoint/cartoon/finetune-000600.pt', help="path to the finetuned stylegan model")
         self.parser.add_argument("--weight", type=float, nargs=18, default=[1]*9+[0]*9, help="the weight for blending two models")
