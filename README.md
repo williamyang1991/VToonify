@@ -278,7 +278,13 @@ If you find this work useful for your research, please consider citing our paper
   title={VToonify: Controllable High-Resolution Portrait Video Style Transfer},
   author={Yang, Shuai and Jiang, Liming and Liu, Ziwei and Loy, Chen Change},
   journal={ACM Transactions on Graphics (TOG)},
-  year={2022}
+  volume={41},
+  number={6},
+  articleno={203},
+  pages={1--15},
+  year={2022},
+  publisher={ACM New York, NY, USA},
+  doi={10.1145/3550454.3555437},
 }
 ```
 
