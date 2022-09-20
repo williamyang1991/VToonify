@@ -242,14 +242,17 @@ def train(args, generator, discriminator, g_optim, d_optim, g_ema, percept, pars
             wc = wc.detach()    
             xc, _ = g_ema.stylegan()([wc], input_is_latent=True, truncation=0.5, truncation_latent=0)
             xc = torch.clamp(xc, -1, 1).detach() # x''
-            xl = pspencoder(F.adaptive_avg_pool2d(xc, 256)) 
-            xl = g_ema.zplus2wplus(xl) # E_s(x''_down)
-            xl = torch.cat((style[:,0:7], xl[:,7:18]), dim=1).detach() # w'' = concatenate E_s(s) and E_s(x''_down)
+            if not args.fix_color and args.fix_style: # only transfer this fixed style's color
+                xl = style.clone()
+            else:
+                xl = pspencoder(F.adaptive_avg_pool2d(xc, 256)) 
+                xl = g_ema.zplus2wplus(xl) # E_s(x''_down) 
+                xl = torch.cat((style[:,0:7], xl[:,7:18]), dim=1).detach() # w'' = concatenate E_s(s) and E_s(x''_down)
             xs, _ = g_ema.generator([wc], xl, input_is_latent=True, 
                               truncation=0.5, truncation_latent=0, use_res=True, interp_weights=weight)
             xs = torch.clamp(xs, -1, 1).detach() # y'=G1(w', w'', d_s, d_c)
             # apply color jitter to w'. we fuse w' of the current iteration with w' of the last iteration
-            if idx > 0 and i >= (args.iter/2.0) and not args.fix_color:
+            if idx > 0 and i >= (args.iter/2.0) and (not args.fix_color and not args.fix_style):
                 wcfuse = wc.clone()
                 wcfuse[:,7:] = wc_[:,7:] * (i/(args.iter/2.0)-1) + wcfuse[:,7:] * (2-i/(args.iter/2.0))
                 xc, _ = g_ema.stylegan()([wcfuse], input_is_latent=True, truncation=0.5, truncation_latent=0)
