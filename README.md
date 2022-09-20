@@ -188,11 +188,11 @@ Download the supporting models to the `./checkpoint/` folder and arrange them in
 | [directions.npy](https://drive.google.com/file/d/1HbjmOIOfxqTAVScZOI2m7_tPgMPnc0uM/view) | Editing vectors taken from [LowRankGAN](https://github.com/zhujiapeng/LowRankGAN) for editing face attributes |
 | [Toonify](https://drive.google.com/drive/folders/1GZQ6Gs5AzJq9lUL-ldIQexi0JYPKNy8b) \| [DualStyleGAN](https://drive.google.com/drive/folders/1GZQ6Gs5AzJq9lUL-ldIQexi0JYPKNy8b) | pre-trained stylegan-based toonification models|
 
-To customize your own style, you may need to train new Toonify/DualStyleGAN model following [here](https://github.com/williamyang1991/DualStyleGAN#3-training-dualstylegan).
+To customize your own style, you may need to train a new Toonify/DualStyleGAN model following [here](https://github.com/williamyang1991/DualStyleGAN#3-training-dualstylegan).
 
 ### Train VToonify-D
 
-Given the supporting models arranged in the [default folder structure](./checkpoint/), we can simple pre-train the encoder and train the whole VToonify-D by running
+Given the supporting models arranged in the [default folder structure](./checkpoint/), we can simply pre-train the encoder and train the whole VToonify-D by running
 ```python
 # for pre-training the encoder
 python -m torch.distributed.launch --nproc_per_node=N_GPU --master_port=PORT train_vtoonify_d.py \
@@ -212,7 +212,7 @@ VToonify-D provides the following STYLE CONTROL OPTIONS:
 - `--style_id`: the index of the style image (find the mapping between index and the style image [here](https://github.com/williamyang1991/DualStyleGAN/tree/main/doc_images)). 
 - `--style_degree` (default: 0.5): the degree of style.
 
-Here is an example to reproduce the VToonify-Dsd on Cartoon style and the VToonify-D specialized for a mild toonification on the 26-th cartoon style:
+Here is an example to reproduce the VToonify-Dsd on Cartoon style and the VToonify-D specialized for a mild toonification on the 26th cartoon style:
 ```python
 python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_vtoonify_d.py \
        --iter 30000 --stylegan_path ./checkpoint/cartoon/generator.pt --exstyle_path ./checkpoint/cartoon/refined_exstyle_code.npy \
@@ -261,7 +261,7 @@ python -m torch.distributed.launch --nproc_per_node=8 --master_port=8765 train_v
 
 ## (3) Results
 
-Our framework is compatible with the existing StyleGAN-based image toonification models to extend them to video toonification, and inherits their appealing features for flexible style control. With DualStyleGAN as the backbone, our VToonify is able to transfer the style of various reference images and adjust the style degree in one model.
+Our framework is compatible with existing StyleGAN-based image toonification models to extend them to video toonification, and inherits their appealing features for flexible style control. With DualStyleGAN as the backbone, our VToonify is able to transfer the style of various reference images and adjust the style degree in one model.
 
 https://user-images.githubusercontent.com/18130694/189510094-4378caca-e8d9-48e1-9e5d-c8ec038e4bc5.mp4
 
