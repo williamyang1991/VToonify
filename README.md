@@ -7,7 +7,7 @@ This repository provides the official PyTorch implementation for the following p
 **VToonify: Controllable High-Resolution Portrait Video Style Transfer**<br>
 [Shuai Yang](https://williamyang1991.github.io/), [Liming Jiang](https://liming-jiang.com/), [Ziwei Liu](https://liuziwei7.github.io/) and [Chen Change Loy](https://www.mmlab-ntu.com/person/ccloy/)<br>
 In ACM TOG (Proceedings of SIGGRAPH Asia), 2022.<br>
-[**Project Page**](https://www.mmlab-ntu.com/project/vtoonify/) | **Paper** | [**Supplementary Video**](https://youtu.be/0_OmVhDgYuY) <br>
+[**Project Page**](https://www.mmlab-ntu.com/project/vtoonify/) | **Paper** (will be released this week)| [**Supplementary Video**](https://youtu.be/0_OmVhDgYuY) <br>
 
 <a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)
 > **Abstract:** *Generating high-quality artistic portrait videos is an important and desirable task in computer graphics and vision.
