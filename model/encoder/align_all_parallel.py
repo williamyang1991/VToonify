@@ -39,10 +39,13 @@ def get_landmark(filepath, predictor):
     else:
         img = filepath
     dets = detector(img, 1)
-
+    
+    shape = None
     for k, d in enumerate(dets):
         shape = predictor(img, d)
-
+    
+    if shape is None:
+        print('Error: No face detected! If you are sure there are faces in your input, you may rerun the code several times until the face is detected. Sometimes the detector is unstable.')
     t = list(shape.parts())
     a = []
     for tt in t:
