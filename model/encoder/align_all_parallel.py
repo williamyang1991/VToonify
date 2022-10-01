@@ -40,6 +40,10 @@ def get_landmark(filepath, predictor):
         img = filepath
     dets = detector(img, 1)
     
+    if len(dets) == 0:
+        print('Error: no face detected!')
+        return None
+    
     shape = None
     for k, d in enumerate(dets):
         shape = predictor(img, d)
@@ -61,7 +65,9 @@ def align_face(filepath, predictor):
     """
 
     lm = get_landmark(filepath, predictor)
-
+    if lm is None:
+        return None    
+    
     lm_chin = lm[0: 17]  # left-right
     lm_eyebrow_left = lm[17: 22]  # left-right
     lm_eyebrow_right = lm[22: 27]  # left-right
