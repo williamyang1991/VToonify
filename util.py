@@ -166,7 +166,7 @@ def get_video_crop_parameter(filepath, predictor, padding=[200,200,200,200]):
     else:
         img = filepath
     lm = get_landmark(img, predictor)
-    if len(lm) == 0:
+    if lm is None:
         return None
     lm_chin          = lm[0  : 17]  # left-right
     lm_eyebrow_left  = lm[17 : 22]  # left-right
