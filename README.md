@@ -29,6 +29,7 @@ Extensive experimental results demonstrate the effectiveness of our proposed VTo
 
 ## Updates
 
+- [10/2022] Integrated to 🤗 [Hugging Face](https://huggingface.co/spaces/PKUWilliamYang/VToonify).
 - [09/2022] Input videos and video results are released.
 - [09/2022] Paper is released.
 - [09/2022] Code is released.
