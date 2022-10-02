@@ -48,7 +48,7 @@ def get_landmark(filepath, predictor):
     for k, d in enumerate(dets):
         shape = predictor(img, d)
     
-   t = list(shape.parts())
+    t = list(shape.parts())
     a = []
     for tt in t:
         a.append([tt.x, tt.y])
