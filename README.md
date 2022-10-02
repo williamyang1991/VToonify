@@ -9,7 +9,9 @@ This repository provides the official PyTorch implementation for the following p
 In ACM TOG (Proceedings of SIGGRAPH Asia), 2022.<br>
 [**Project Page**](https://www.mmlab-ntu.com/project/vtoonify/) | [**Paper**](https://arxiv.org/abs/2209.11224) | [**Supplementary Video**](https://youtu.be/0_OmVhDgYuY) | [**Input Data and Video Results**](https://drive.google.com/file/d/1A2gC2PW1ZmU6VWQRvMN98njqRxfLjqbk/view?usp=sharing) <br>
 
-<a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)
+<a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PKUWilliamYang/VToonify)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)
 > **Abstract:** *Generating high-quality artistic portrait videos is an important and desirable task in computer graphics and vision.
 Although a series of successful portrait image toonification models built upon the powerful StyleGAN have been proposed,
 these image-oriented methods have obvious limitations when applied to videos, such as the fixed frame size, the requirement of face alignment, missing non-facial details and temporal inconsistency.
@@ -32,7 +34,7 @@ Extensive experimental results demonstrate the effectiveness of our proposed VTo
 - [09/2022] Code is released.
 - [09/2022] This website is created.
 
-# Web Demo
+## Web Demo
 
 Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PKUWilliamYang/VToonify)
 
