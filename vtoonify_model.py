@@ -208,7 +208,7 @@ class Model():
 
         batch_frames = []
         if video_cap.get(3) != 0:
-            batch_size = min(8, max(1, int(4 * 400 * 360 / video_cap.get(3) / video_cap.get(4))))
+            batch_size = min(4, max(1, int(4 * 400 * 360 / video_cap.get(3) / video_cap.get(4))))
         else:
             batch_size = 1
         print('Using batch size of %d on %d frames'%(batch_size, num))
