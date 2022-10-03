@@ -29,7 +29,8 @@ Extensive experimental results demonstrate the effectiveness of our proposed VTo
 
 ## Updates
 
-- [10/2022] Integrated to 🤗 [Hugging Face](https://huggingface.co/spaces/PKUWilliamYang/VToonify).
+- [10/2022] Integrate [Gradio](https://gradio.app/) interface into [Colab notebook](http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb). Enjoy the web demo!
+- [10/2022] Integrated to 🤗 [Hugging Face](https://huggingface.co/spaces/PKUWilliamYang/VToonify). Enjoy the web demo!
 - [09/2022] Input videos and video results are released.
 - [09/2022] Paper is released.
 - [09/2022] Code is released.
