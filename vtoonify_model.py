@@ -153,7 +153,7 @@ class Model():
         message = 'Error: no face detected!'
         instyle = torch.zeros(1,18,512).to(self.device)
         video_cap = cv2.VideoCapture(video)
-        num = min(100, int(video_cap.get(7)))
+        num = int(video_cap.get(7))
         success, frame = video_cap.read()
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         frame, instyle, message, w, h, top, bottom, left, right, scale = self.detect_and_align(frame, top, bottom, left, right, True)
@@ -200,7 +200,7 @@ class Model():
         if exstyle is None:
             exstyle = self.exstyle
         video_cap = cv2.VideoCapture(aligned_video)
-        num = min(100, int(video_cap.get(7)))
+        num = int(video_cap.get(7))
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         videoWriter = cv2.VideoWriter('output.mp4', fourcc, 
                                       video_cap.get(5), (int(video_cap.get(3)*4),
@@ -208,7 +208,7 @@ class Model():
 
         batch_frames = []
         if video_cap.get(3) != 0:
-            batch_size = max(1, int(4 * 256* 256/ video_cap.get(3) / video_cap.get(4)))
+            batch_size = min(8, max(1, int(4 * 400 * 360 / video_cap.get(3) / video_cap.get(4))))
         else:
             batch_size = 1
         print('Using batch size of %d on %d frames'%(batch_size, num))
