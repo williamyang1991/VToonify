@@ -80,7 +80,7 @@ Pre-trained models can be downloaded from [Google Drive](https://drive.google.co
         <th>Backbone</th><th>Model</th><th>Description</th>
     </tr>
     <tr>
-        <td rowspan="5">DualStyleGAN</td><td><a href="https://drive.google.com/drive/folders/1DuZfXt6b_xhTAQSN0D8m7N1np0Web0Ky">cartoon</a></td><td>pre-trained VToonify-D models and 317 cartoon style codes</td>
+        <td rowspan="6">DualStyleGAN</td><td><a href="https://drive.google.com/drive/folders/1DuZfXt6b_xhTAQSN0D8m7N1np0Web0Ky">cartoon</a></td><td>pre-trained VToonify-D models and 317 cartoon style codes</td>
     </tr>
     <tr>
         <td><a href="https://drive.google.com/drive/folders/12TzTQqwBedsYX3kE_420mdTbWl9lwv4Y">caricature</a></td><td>pre-trained VToonify-D models and 199 caricature style codes</td>
@@ -93,7 +93,10 @@ Pre-trained models can be downloaded from [Google Drive](https://drive.google.co
     </tr>   
     <tr>
         <td><a href="https://drive.google.com/drive/folders/1Hld7OeZqYBrg6r35IA_x4sNtt1abHUMU">pixar</a></td><td>pre-trained VToonify-D models and 122 pixar style codes</td>
-    </tr>   
+    </tr> 
+    <tr>
+        <td><a href="https://drive.google.com/drive/folders/1LQGNMDEHM70nOhm3-xY228YpJNlPnf_s">illustration</a></td><td>pre-trained VToonify-D models and 156 illustration style codes</td>
+    </tr>     
     <tr>
         <td rowspan="5">Toonify</td><td><a href="https://drive.google.com/drive/folders/1FFtTVgiDKZ_InnwUJLDuA1wfghZp41nX">cartoon</a></td><td>pre-trained VToonify-T model</td>
     </tr>
