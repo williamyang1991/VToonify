@@ -37,7 +37,6 @@ class Model():
             'cartoon5-d': ['vtoonify_d_cartoon/vtoonify_s_d.pt', 8],
             'comic1-d': ['vtoonify_d_comic/vtoonify_s_d.pt', 28],
             'comic2-d': ['vtoonify_d_comic/vtoonify_s_d.pt', 18],
-            'comic3-d': ['vtoonify_d_illustration/vtoonify_s054_d_c.pt', 54],
             'arcane1': ['vtoonify_d_arcane/vtoonify_s000_d0.5.pt', 0],
             'arcane1-d': ['vtoonify_d_arcane/vtoonify_s_d.pt', 0],
             'arcane2': ['vtoonify_d_arcane/vtoonify_s077_d0.5.pt', 77],
@@ -46,6 +45,11 @@ class Model():
             'caricature2': ['vtoonify_d_caricature/vtoonify_s068_d0.5.pt', 68],
             'pixar': ['vtoonify_d_pixar/vtoonify_s052_d0.5.pt', 52],
             'pixar-d': ['vtoonify_d_pixar/vtoonify_s_d.pt', 52],
+            'illustration1-d': ['vtoonify_d_illustration/vtoonify_s054_d_c.pt', 54],
+            'illustration2-d': ['vtoonify_d_illustration/vtoonify_s004_d_c.pt', 4],
+            'illustration3-d': ['vtoonify_d_illustration/vtoonify_s009_d_c.pt', 9],
+            'illustration4-d': ['vtoonify_d_illustration/vtoonify_s043_d_c.pt', 43],
+            'illustration5-d': ['vtoonify_d_illustration/vtoonify_s086_d_c.pt', 86],
         }
         
         self.landmarkpredictor = self._create_dlib_landmark_model()
@@ -58,6 +62,9 @@ class Model():
         
         self.vtoonify, self.exstyle = self._load_default_model()
         self.color_transfer = False
+        self.style_name = 'cartoon1'
+        self.video_limit_cpu = 100
+        self.video_limit_gpu = 300
         
     @staticmethod
     def _create_dlib_landmark_model():
@@ -88,10 +95,13 @@ class Model():
         return vtoonify, exstyle
     
     def load_model(self, style_type: str) -> tuple[torch.Tensor, str]:
-        if style_type == 'comic3-d':
+        if 'illustration' in style_type:
             self.color_transfer = True
         else:
             self.color_transfer = False
+        if style_type not in self.style_types.keys():
+            return None, 'Oops, wrong Style Type. Please select a valid model.'
+        self.style_name = style_type
         model_path, ind = self.style_types[style_type]
         style_path = os.path.join('models',os.path.dirname(model_path),'exstyle_code.npy')
         self.vtoonify.load_state_dict(torch.load(huggingface_hub.hf_hub_download(MODEL_REPO,'models/'+model_path), 
@@ -103,9 +113,9 @@ class Model():
         return exstyle, 'Model of %s loaded.'%(style_type)
     
     def detect_and_align(self, frame, top, bottom, left, right, return_para=False):
-        message = 'Error: no face detected!'
+        message = 'Error: no face detected! Please retry or change the photo.'
         paras = get_video_crop_parameter(frame, self.landmarkpredictor, [left, right, top, bottom])
-        instyle = torch.zeros(1,18,512).to(self.device)
+        instyle = None
         h, w, scale = 0, 0, 0
         if paras is not None:
             h,w,top,bottom,left,right,scale = paras
@@ -135,25 +145,39 @@ class Model():
     #@torch.inference_mode()
     def detect_and_align_image(self, image: str, top: int, bottom: int, left: int, right: int
                               ) -> tuple[np.ndarray, torch.Tensor, str]:
-        
+        if image is None:
+            return np.zeros((256,256,3), np.uint8), None, 'Error: fail to load empty file.'
         frame = cv2.imread(image)
+        if frame is None:
+            return np.zeros((256,256,3), np.uint8), None, 'Error: fail to load the image.'       
         frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
         return self.detect_and_align(frame, top, bottom, left, right)
     
     def detect_and_align_video(self, video: str, top: int, bottom: int, left: int, right: int
                               ) -> tuple[np.ndarray, torch.Tensor, str]:
-
+        if video is None:
+            return np.zeros((256,256,3), np.uint8), None, 'Error: fail to load empty file.'
         video_cap = cv2.VideoCapture(video)
+        if video_cap.get(7) == 0:
+            video_cap.release()
+            return np.zeros((256,256,3), np.uint8), torch.zeros(1,18,512).to(self.device), 'Error: fail to load the video.'
         success, frame = video_cap.read()
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         video_cap.release()
         return self.detect_and_align(frame, top, bottom, left, right)
     
     def detect_and_align_full_video(self, video: str, top: int, bottom: int, left: int, right: int) -> tuple[str, torch.Tensor, str]:
-        message = 'Error: no face detected!'
-        instyle = torch.zeros(1,18,512).to(self.device)
+        message = 'Error: no face detected! Please retry or change the video.'
+        instyle = None
+        if video is None:
+            return 'default.mp4', instyle, 'Error: fail to load empty file.'
         video_cap = cv2.VideoCapture(video)
-        num = int(video_cap.get(7))
+        if video_cap.get(7) == 0:
+            video_cap.release()
+            return 'default.mp4', instyle, 'Error: fail to load the video.'    
+        num = min(self.video_limit_gpu, int(video_cap.get(7)))
+        if self.device == 'cpu':
+            num = min(self.video_limit_cpu, num)
         success, frame = video_cap.read()
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         frame, instyle, message, w, h, top, bottom, left, right, scale = self.detect_and_align(frame, top, bottom, left, right, True)
@@ -161,6 +185,7 @@ class Model():
             return 'default.mp4', instyle, message    
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         videoWriter = cv2.VideoWriter('input.mp4', fourcc, video_cap.get(5), (int(right-left), int(bottom-top)))
+        videoWriter.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
         kernel_1d = np.array([[0.125],[0.375],[0.375],[0.125]])
         for i in range(num-1):
             success, frame = video_cap.read()
@@ -177,7 +202,11 @@ class Model():
 
         return 'input.mp4', instyle, 'Successfully rescale the video to (%d, %d)'%(bottom-top, right-left)
     
-    def image_toonify(self, aligned_face: np.ndarray, instyle: torch.Tensor, exstyle: torch.Tensor, style_degree: float) -> np.ndarray:  
+    def image_toonify(self, aligned_face: np.ndarray, instyle: torch.Tensor, exstyle: torch.Tensor, style_degree: float) -> tuple[np.ndarray, str]:
+        if instyle is None or aligned_face is None:
+            return np.zeros((256,256,3), np.uint8), 'Opps, something wrong with the input. Please go to Step 2 and Rescale Image/First Frame again.'
+        if exstyle is None:
+            return np.zeros((256,256,3), np.uint8), 'Opps, something wrong with the style type. Please go to Step 1 and load model again.'
         if exstyle is None:
             exstyle = self.exstyle
         with torch.no_grad():
@@ -193,14 +222,21 @@ class Model():
             inputs = torch.cat((x, x_p/16.), dim=1)
             y_tilde = self.vtoonify(inputs, s_w.repeat(inputs.size(0), 1, 1), d_s = style_degree)        
             y_tilde = torch.clamp(y_tilde, -1, 1)
-
-        return ((y_tilde[0].cpu().numpy().transpose(1, 2, 0) + 1.0) * 127.5).astype(np.uint8)
+        print('*** Toonify %dx%d image'%(y_tilde.shape[2], y_tilde.shape[3]))
+        return ((y_tilde[0].cpu().numpy().transpose(1, 2, 0) + 1.0) * 127.5).astype(np.uint8), 'Successfully toonify the image with style of %s'%(self.style_name)
     
-    def video_tooniy(self, aligned_video: str, instyle: torch.Tensor, exstyle: torch.Tensor, style_degree: float) -> str: 
-        if exstyle is None:
-            exstyle = self.exstyle
+    def video_tooniy(self, aligned_video: str, instyle: torch.Tensor, exstyle: torch.Tensor, style_degree: float) -> tuple[str, str]:
+        if aligned_video is None:
+            return 'default.mp4', 'Opps, something wrong with the input. Please go to Step 2 and Rescale Video again.'         
         video_cap = cv2.VideoCapture(aligned_video)
-        num = int(video_cap.get(7))
+        if instyle is None or aligned_video is None or video_cap.get(7) == 0:
+            video_cap.release()
+            return 'default.mp4', 'Opps, something wrong with the input. Please go to Step 2 and Rescale Video again.'
+        if exstyle is None:
+            return 'default.mp4', 'Opps, something wrong with the style type. Please go to Step 1 and load model again.'
+        num = min(self.video_limit_gpu, int(video_cap.get(7)))
+        if self.device == 'cpu':
+            num = min(self.video_limit_cpu, num)
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         videoWriter = cv2.VideoWriter('output.mp4', fourcc, 
                                       video_cap.get(5), (int(video_cap.get(3)*4),
@@ -208,10 +244,13 @@ class Model():
 
         batch_frames = []
         if video_cap.get(3) != 0:
-            batch_size = min(4, max(1, int(4 * 400 * 360 / video_cap.get(3) / video_cap.get(4))))
+            if self.device == 'cpu':
+                batch_size = max(1, int(4 * 256* 256/ video_cap.get(3) / video_cap.get(4)))
+            else:
+                batch_size = min(max(1, int(4 * 400 * 360/ video_cap.get(3) / video_cap.get(4))), 4)
         else:
             batch_size = 1
-        print('Using batch size of %d on %d frames'%(batch_size, num))
+        print('*** Toonify using batch size of %d on %dx%d video of %d frames'%(batch_size, int(video_cap.get(3)*4), int(video_cap.get(4)*4), num))
         with torch.no_grad():
             if self.color_transfer:
                 s_w = exstyle
@@ -237,4 +276,5 @@ class Model():
 
         videoWriter.release()
         video_cap.release()
-        return 'output.mp4'
+        return 'output.mp4', 'Successfully toonify video of %d frames with style of %s'%(num, self.style_name)
+
