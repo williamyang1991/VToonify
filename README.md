@@ -11,7 +11,9 @@ In ACM TOG (Proceedings of SIGGRAPH Asia), 2022.<br>
 
 <a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PKUWilliamYang/VToonify)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=williamyang1991/VToonify)
+<!--![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)-->
+
 > **Abstract:** *Generating high-quality artistic portrait videos is an important and desirable task in computer graphics and vision.
 Although a series of successful portrait image toonification models built upon the powerful StyleGAN have been proposed,
 these image-oriented methods have obvious limitations when applied to videos, such as the fixed frame size, the requirement of face alignment, missing non-facial details and temporal inconsistency.
