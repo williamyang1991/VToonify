@@ -229,7 +229,7 @@ def train(args, generator, discriminator, g_optim, d_optim, g_ema, percept, pars
         degree_label = torch.zeros(args.batch, 1).to(device) + d_s
         
         # style index condition for discriminator
-        style_ind = torch.randint(0, styles.size(0), (args.batch,))
+        style_ind = torch.randint(0, styles.size(0), (args.batch,)).to(device)
         if args.fix_style or idx == 0 or i == 0:
             style_ind = style_ind * 0 + args.style_id
         # sample pre-saved E_s(s)
