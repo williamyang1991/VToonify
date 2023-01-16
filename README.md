@@ -62,7 +62,7 @@ We recommend running this repository using [Anaconda](https://docs.anaconda.com/
 conda env create -f ./environment/vtoonify_env.yaml
 ```
 
-If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
+☞ If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
 
 <br/>
 
