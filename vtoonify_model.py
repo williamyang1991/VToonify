@@ -247,7 +247,7 @@ class Model():
             if self.device == 'cpu':
                 batch_size = max(1, int(4 * 256* 256/ video_cap.get(3) / video_cap.get(4)))
             else:
-                batch_size = min(max(1, int(4 * 400 * 360/ video_cap.get(3) / video_cap.get(4))), 4)
+                batch_size = max(1, int(4 * 400 * 360/ video_cap.get(3) / video_cap.get(4)))
         else:
             batch_size = 1
         print('*** Toonify using batch size of %d on %dx%d video of %d frames'%(batch_size, int(video_cap.get(3)*4), int(video_cap.get(4)*4), num))
