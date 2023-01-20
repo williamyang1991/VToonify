@@ -10,3 +10,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 4. In the event that redistribution and/or use for commercial purpose in source or binary forms, with or without modification is required, please contact the contributor(s) of the work.
 
 
+---
+For the commercial use of VToonify, please consult Prof. Chen Change Loy (ccloy@ntu.edu.sg)
