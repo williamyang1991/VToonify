@@ -11,8 +11,10 @@ In ACM TOG (Proceedings of SIGGRAPH Asia), 2022.<br>
 
 <a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/PKUWilliamYang/VToonify)
+[![Deque](https://img.shields.io/badge/Deque-Notebook-blue)](https://deque.ai/experience/notebook/dbabc82a-ace4-11ed-84b5-0242ac110002)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=williamyang1991/VToonify)
 <!--![visitors](https://visitor-badge.glitch.me/badge?page_id=williamyang1991/VToonify)-->
+
 
 > **Abstract:** *Generating high-quality artistic portrait videos is an important and desirable task in computer graphics and vision.
 Although a series of successful portrait image toonification models built upon the powerful StyleGAN have been proposed,
@@ -31,6 +33,7 @@ Extensive experimental results demonstrate the effectiveness of our proposed VTo
 
 ## Updates
 
+- [02/2023] Integrated to [Deque Notebook](https://deque.ai/experience/notebook/dbabc82a-ace4-11ed-84b5-0242ac110002).
 - [10/2022] Integrate [Gradio](https://gradio.app/) interface into [Colab notebook](http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb). Enjoy the web demo!
 - [10/2022] Integrated to 🤗 [Hugging Face](https://huggingface.co/spaces/PKUWilliamYang/VToonify). Enjoy the web demo!
 - [09/2022] Input videos and video results are released.
@@ -69,7 +72,9 @@ conda env create -f ./environment/vtoonify_env.yaml
 ## (1) Inference for Image/Video Toonification
 
 ### Inference Notebook 
-<a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>  
+<a href="http://colab.research.google.com/github/williamyang1991/VToonify/blob/master/notebooks/inference_playground.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> 
+[![Deque](https://img.shields.io/badge/Deque-Notebook-blue)](https://deque.ai/experience/notebook/dbabc82a-ace4-11ed-84b5-0242ac110002)
+
 To help users get started, we provide a Jupyter notebook found in `./notebooks/inference_playground.ipynb` that allows one to visualize the performance of VToonify.
 The notebook will download the necessary pretrained models and run inference on the images found in `./data/`.
 
