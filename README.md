@@ -65,6 +65,8 @@ We recommend running this repository using [Anaconda](https://docs.anaconda.com/
 conda env create -f ./environment/vtoonify_env.yaml
 ```
 
+☞ Install on Windows: https://github.com/williamyang1991/VToonify/issues/50#issuecomment-1443061101 and https://github.com/williamyang1991/VToonify/issues/38#issuecomment-1442146800
+
 ☞ If you have a problem regarding the cpp extention (fused and upfirdn2d), or no GPU is available, you may refer to [CPU compatible version](./model/stylegan/op_cpu#readme).
 
 <br/>
